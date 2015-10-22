@@ -10,7 +10,12 @@
 [[ -f "${TM_SUPPORT_PATH}/lib/webpreview.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/webpreview.sh"
 
 CONVERT=${TM_CONVERT:-convert}
-NUM=$(basename ${TM_FILEPATH})
+if [ -z "${TM_FILEPATH}" ]
+then
+    NUM="untitled"
+else
+    NUM=$(basename ${TM_FILEPATH})
+fi
 OUTPUT=$($CONVERT "${TM_FILEPATH}" png:- 2&gt;/tmp/tm_mvg_err.log | base64)
 #} 2&gt; &gt;(setval ERRVAL)
 html_header "MVG Preview" $NUM "PNG"
