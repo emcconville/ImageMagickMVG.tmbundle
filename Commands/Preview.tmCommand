@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+[[ -f "${TM_SUPPORT_PATH}/lib/webpreview.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/webpreview.sh"
+
+CONVERT=${TM_CONVERT:-convert}
+NUM=$(basename ${TM_FILEPATH})
+OUTPUT=$($CONVERT "${TM_FILEPATH}" png:- 2&gt;/tmp/tm_mvg_err.log | base64)
+#} 2&gt; &gt;(setval ERRVAL)
+html_header "MVG Preview" $NUM "PNG"
+echo "&lt;img src=\"data:image/png;base64,${OUTPUT}\" /&gt;"
+if [ -f "/tmp/tm_mvg_err.log" ]
+then
+    echo "&lt;span class=\"stderr\"&gt;"
+    cat "/tmp/tm_mvg_err.log"
+    echo "&lt;/span&gt;"
+fi
+html_footer</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Preview</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.mvg</string>
+	<key>uuid</key>
+	<string>35B11164-BC78-41A5-B589-920B26A6B11F</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

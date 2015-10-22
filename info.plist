@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>rzppbaivyyr@rzppbaivyyr.pbz</string>
+	<key>contactName</key>
+	<string>Eric McConville</string>
+	<key>description</key>
+	<string>Language support for ImageMagick's MVG format</string>
+	<key>name</key>
+	<string>MVG</string>
+	<key>uuid</key>
+	<string>09670A22-2132-4C2E-922E-EE5DCADF7A0B</string>
+</dict>
+</plist>
