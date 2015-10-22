@@ -5,13 +5,13 @@
 	<key>name</key>
 	<string>Indent</string>
 	<key>scope</key>
-	<string>source.mvg</string>
+	<string>keyword.control.mvg</string>
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^\s*pop\s(.*?)$</string>
-		<key>increaseIndentPattern</key>
-		<string>^\s*push\s(.*?)$</string>
+		<string>pop</string>
+		<key>indentNextLinePattern</key>
+		<string>push</string>
 	</dict>
 	<key>uuid</key>
 	<string>2DFFA210-AD39-430A-8E0F-6066DDC5BBC5</string>

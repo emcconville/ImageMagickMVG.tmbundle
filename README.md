@@ -8,3 +8,9 @@ A TextMate bundle for working with ImageMagick's vector graphic language.
  - Context folding
  - Document preview
  - Tab completion
+
+# Installation
+
+    cd ~/Library/Application\ Support/TextMate/Managed/Bundles
+    git clone https://github.com/emcconville/ImageMagickMVG.tmbundle.git
+

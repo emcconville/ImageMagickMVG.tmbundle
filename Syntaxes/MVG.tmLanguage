@@ -32,7 +32,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(pop|push)\s+(graphic-context|defs|gradient|pattern|clip-path)\b</string>
+			<string>^\s*(pop|push)\s+(graphic-context|defs|gradient|pattern|clip-path)\b\s*([^\s]+)?</string>
 			<key>name</key>
 			<string>meta.keyword.control.mvg</string>
 		</dict>
