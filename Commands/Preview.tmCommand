@@ -25,6 +25,7 @@ then
     echo "&lt;span class=\"stderr\"&gt;"
     cat "/tmp/tm_mvg_err.log"
     echo "&lt;/span&gt;"
+    rm -f "/tmp/tm_mvg_err.log"
 fi
 html_footer</string>
 	<key>input</key>
